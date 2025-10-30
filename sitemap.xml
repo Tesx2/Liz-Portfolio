@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/</loc>
+    <lastmod>2025-10-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Core Pages -->
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/about.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/services.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/portfolio.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/testimonials.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/blog.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/contact.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/blog-posts/animation-details.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/blog-posts/color-emotion.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Portfolio Subpages -->
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/portfolio-pages/graphic-design.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://Tesx2.github.io/lizkendi-portfolio/portfolio-pages/animation.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
