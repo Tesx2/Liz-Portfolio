@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Liz Kendi</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/et-emilia-grace" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/profile/logo.png" alt="Liz Kendi Logo">
+      <h1>Liz</h1>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="contact-content">
+      <h2 class="section-title">Let’s Connect</h2>
+      <p class="contact-intro">Have a project in mind or just want to say hello? I’d love to hear from you.</p>
+
+      <div class="contact-body">
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/movpdznp"
+          method="POST"
+        >
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn primary">Send Message </button>
+        </form>
+
+
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>Email: <a href="mailto:lizkendi.mwebia@gmail.com">lizkendi.mwebia@gmail.com</a></p>
+          <p>Facebook: <a href="www.facebook.com/profile.php?id=100071187649571">@lizkendi</a></p>
+          <p>LinkedIn: <a href="www.linkedin.com/in/liz-kendi-b4048823b">linkedin.com/in/lizkendi</a></p>
+          <p>WhatsApp: 
+            <a href="https://wa.me/254748299339" target="_blank" rel="noopener noreferrer">
+              +254 748 299339
+            </a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+</body>
+</html>

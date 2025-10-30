@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Liz Kendi</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/et-emilia-grace" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/profile/logo.png" alt="Liz Kendi Logo">
+      <h1>Liz</h1>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Blog Section -->
+  <section class="blog">
+    <div class="blog-content">
+      <h2 class="section-title">My Creative Journal</h2>
+      <p class="blog-intro">
+        I love sharing thoughts, lessons, and inspirations from my design and animation journey.  
+        Here are a few recent stories and creative insights.
+      </p>
+
+      <div class="blog-grid">
+        <!-- Blog Post 1 -->
+        <article class="blog-card reveal">
+          <img src="assets/icons/thought-process.jpg" alt="Creative Process">
+          <div class="blog-text">
+            <h3>Finding Flow in the Creative Process</h3>
+            <p>How I balance structure and spontaneity to stay inspired and productive as a designer.</p>
+            <a href="blog-posts/blog-post.html" class="read-more">Read More →</a>
+          </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="blog-card reveal">
+          <img src="assets/icons/color-theory.jpg" alt="Color Theory">
+          <div class="blog-text">
+            <h3>The Emotion of Color in Visual Design</h3>
+            <p>Exploring how different hues and tones influence perception and mood.</p>
+            <a href="blog-posts/color-emotion.html" class="read-more">Read More →</a>
+          </div>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="blog-card reveal">
+        <video autoplay loop muted playsinline>
+            <source src="assets/icons/animaion.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="blog-text">
+            <h3>Small Details, Big Impact in Animation</h3>
+            <p>Why subtle motion and timing can elevate your animations from good to memorable.</p>
+            <a href="blog-posts/animation-details.html" class="read-more">Read More →</a>
+        </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

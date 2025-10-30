@@ -1,0 +1,1086 @@
+/* ---------- Base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0d0d0d 40%, #8a307f 100%);
+  color: #f4f4f4;
+}
+
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.logo h1 {
+  font-family: 'ET Emilia Grace', serif;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #8a307f;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 80px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 45%;
+}
+
+.hero-content .intro {
+  font-size: 20px;
+  color: #d4a5d4;
+}
+
+.hero-content .name {
+  font-family: 'ET Emilia Grace', serif;
+  font-size: 70px;
+  color: #8a307f;
+  font-weight: 500;
+}
+
+.hero-content .title {
+  font-size: 28px;
+  color: #8a307f;
+  font-weight: 400;
+  margin: 10px 0 30px 0;
+}
+
+.hero-content .title span {
+  color: #d4a5d4;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #8a307f;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background-color: #73286a;
+}
+
+.btn.secondary {
+  color: #8a307f;
+  border: 1px solid #8a307f;
+}
+
+.btn.secondary:hover {
+  background-color: #8a307f;
+  color: #fff;
+}
+
+
+.email {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #bbb;
+}
+
+/* ---------- Hero Image ---------- */
+.hero-image {
+  position: relative;
+  width: 40%;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 8px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Accent Boxes */
+.accent-box {
+  position: absolute;
+  background-color: #8a307f;
+  box-shadow: 0 0 25px rgba(138, 48, 127, 0.5);
+  z-index: 1;
+}
+
+
+.box1 {
+  width: 60px;
+  height: 60px;
+  top: 40px;
+  right: 120px;
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  bottom: 60px;
+  right: 60px;
+}
+
+.box3 {
+  width: 40px;
+  height: 40px;
+  top: 120px;
+  right: 260px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    width: 80%;
+    margin-top: 40px;
+  }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.accent-box {
+  animation: float 6s ease-in-out infinite;
+}
+
+.box1 { animation-delay: 0s; }
+.box2 { animation-delay: 2s; }
+.box3 { animation-delay: 4s; }
+
+.hero-content .intro { color: #d9b3dc; } /* softer lavender */
+.hero-content .name { color: #8a307f; } /* main brand color */
+.hero-content .title span { color: #c17ac6; } /* highlight tone */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 40px 20px;
+  }
+  .hero-content .name {
+    font-size: 48px;
+  }
+}
+/* ---------- Hamburger Menu ---------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 28px;
+  height: 22px;
+  justify-content: space-between;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+/* Animate icon into X when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ---------- Compact Mobile Nav Dropdown ---------- */
+/* ---------- Compact Mobile Nav Dropdown (Refined) ---------- */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 60px;
+    width: 160px; /* was 240px */
+    background: rgba(17, 17, 17, 0.96);
+    border: 1px solid #8a307f;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s ease;
+    z-index: 1000;
+  }
+
+  nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center; /* center align items */
+    text-align: center;
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  nav a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    width: 100%;
+    display: block;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  nav a:hover {
+    color: #d4a5d4;
+    transform: translateX(5px);
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 30px;
+  }
+}
+
+
+/* ---------- About Page ---------- */
+.about {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d 40%, #8a307f 100%);
+  color: #f4f4f4;
+  padding: 100px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.section-title {
+  font-family: 'ET Emilia Grace', serif;
+  color: #fff;
+  font-size: 48px;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 80px;
+  height: 3px;
+  background: #8a307f;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.about-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.bio {
+  font-size: 18px;
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.bio.highlight {
+  font-size: 19px;
+  color: #f5dff5;
+  font-style: italic;
+  border-left: 3px solid #8a307f;
+  padding-left: 15px;
+  margin-bottom: 30px;
+}
+
+.about-photo {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.about-photo img {
+  width: 85%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(138, 48, 127, 0.4);
+}
+
+.about .btn.primary {
+  background-color: #8a307f;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.about .btn.primary:hover {
+  background-color: #73286a;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-body {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .bio.highlight {
+    border-left: none;
+    border-top: 3px solid #8a307f;
+    padding-top: 15px;
+  }
+}
+
+
+
+/* ---------- Services Page ---------- */
+.services {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d 40%, #8a307f 100%);
+  color: #f4f4f4;
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.services-content {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.services-intro {
+  font-size: 18px;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(138, 48, 127, 0.2);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: #8a307f;
+  box-shadow: 0 0 35px rgba(138, 48, 127, 0.4);
+}
+
+.service-card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-family: 'ET Emilia Grace', serif;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.cta-center {
+  text-align: center;
+}
+
+.services .btn.primary {
+  background-color: #8a307f;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.services .btn.primary:hover {
+  background-color: #73286a;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services {
+    padding: 80px 20px;
+  }
+
+  .services-grid {
+    gap: 25px;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+}
+.service-card video {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(138, 48, 127, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover video {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(138, 48, 127, 0.6);
+}
+/* ---------- Scroll Reveal Animation ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Testimonials Page ---------- */
+.testimonials {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d 40%, #8a307f 100%);
+  color: #f4f4f4;
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonials-content {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.testimonials-intro {
+  font-size: 18px;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 35px 25px;
+  box-shadow: 0 0 25px rgba(138, 48, 127, 0.25);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: #8a307f;
+  box-shadow: 0 0 35px rgba(138, 48, 127, 0.4);
+}
+
+.testimonial-card .quote {
+  font-size: 16px;
+  color: #ddd;
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.testimonial-card .name {
+  font-family: 'ET Emilia Grace', serif;
+  font-size: 18px;
+  color: #c17ac6;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 80px 20px;
+  }
+}
+
+
+/* ---------- Blog Page ---------- */
+.blog {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d 40%, #8a307f 100%);
+  color: #f4f4f4;
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.blog-content {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.blog-intro {
+  font-size: 18px;
+  color: #ddd;
+  max-width: 750px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.blog-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(138, 48, 127, 0.2);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(138, 48, 127, 0.4);
+  border-color: #8a307f;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-text {
+  padding: 20px;
+}
+
+.blog-text h3 {
+  font-family: 'ET Emilia Grace', serif;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.blog-text p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  color: #8a307f;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #c17ac6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog {
+    padding: 80px 25px;
+  }
+
+  .blog-card img {
+    height: 180px;
+  }
+}
+/* ---------- Blog Video Styling ---------- */
+.blog-card video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 20px rgba(138, 48, 127, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover video {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(138, 48, 127, 0.5);
+}
+
+
+
+/* ---------- Blog Post Page ---------- */
+.blog-post {
+  background: linear-gradient(135deg, #0d0d0d 40%, #8a307f 100%);
+  color: #f4f4f4;
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.post-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 25px rgba(138, 48, 127, 0.3);
+}
+
+.post-title {
+  font-family: 'ET Emilia Grace', serif;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  color: #c7a4c8;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.post-meta span {
+  color: #fff;
+  font-weight: 500;
+}
+
+.post-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.post-content blockquote {
+  font-style: italic;
+  color: #f5dff5;
+  border-left: 4px solid #8a307f;
+  padding-left: 20px;
+  margin: 40px 0;
+  line-height: 1.7;
+}
+
+.post-nav {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-post {
+    padding: 80px 25px;
+  }
+
+  .post-title {
+    font-size: 28px;
+  }
+
+  .post-content p {
+    font-size: 16px;
+  }
+}
+
+
+/* ---------- Contact Page ---------- */
+.contact {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d 40%, #8a307f 100%);
+  color: #f4f4f4;
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-intro {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 50px;
+}
+
+.contact-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-family: 'ET Emilia Grace', serif;
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #d4a5d4;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .contact-body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
+
+/* ---------- Toast Notification ---------- */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(138, 48, 127, 0.95);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 6px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 2000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* Success / Error Variants */
+.toast.success {
+  background: rgba(138, 48, 127, 0.95);
+}
+
+.toast.error {
+  background: rgba(200, 60, 60, 0.95);
+}
+
+p a {
+  color: #8a307f;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: #c17ac6;
+  text-decoration: underline;
+}
+
+/* ---------- Portfolio Page (Blog-style Layout) ---------- */
+.portfolio {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d0d0d 40%, #8a307f 100%);
+  color: #f4f4f4;
+  padding: 100px 60px;
+}
+
+.portfolio-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-intro {
+  font-size: 18px;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+.portfolio-category {
+  margin-bottom: 80px;
+}
+
+.category-title {
+  font-family: 'ET Emilia Grace', serif;
+  color: #fff;
+  font-size: 32px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(138, 48, 127, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(138, 48, 127, 0.4);
+}
+
+.portfolio-card img,
+.portfolio-card video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-text {
+  padding: 20px;
+  text-align: left;
+}
+
+.portfolio-text h4 {
+  font-family: 'ET Emilia Grace', serif;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.portfolio-text p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.cta-right {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.cta-right .read-more {
+  text-decoration: none;
+  color: #d4a5d4;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.cta-right .read-more:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 80px 25px;
+  }
+
+  .category-title {
+    text-align: center;
+  }
+
+  .cta-right {
+    text-align: center;
+  }
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  margin: 0 0.3rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--accent-color);
+  color: #fff;
+}

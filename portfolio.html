@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Liz Kendi</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/et-emilia-grace" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/profile/logo.png" alt="Liz Kendi Logo">
+      <h1>Liz</h1>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio">
+    <div class="portfolio-content">
+      <h2 class="section-title">My Creative Work</h2>
+      <p class="portfolio-intro">
+        A showcase of my design and animation projects — where creativity, color, and storytelling meet.
+      </p>
+
+      <!-- Graphic Design Section -->
+      <div class="portfolio-category">
+        <h3 class="category-title">Graphic Design</h3>
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal">
+            <img src="assets/portfolio/brand1.jpg" alt="Logo Project">
+            <div class="portfolio-text">
+              <h4>Logo Design</h4>
+              <p>Minimal yet meaningful brand identity concepts.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <img src="assets/portfolio/poster1.jpg" alt="Poster Design">
+            <div class="portfolio-text">
+              <h4>Poster Design</h4>
+              <p>Vibrant layouts with strong visual storytelling.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <img src="assets/portfolio/package1.jpg" alt="Packaging">
+            <div class="portfolio-text">
+              <h4>Packaging Design</h4>
+              <p>Creative packaging that speaks the brand’s voice.</p>
+            </div>
+          </article>
+        </div>
+        <div class="cta-right">
+          <a href="portfolio-pages/graphic-design.html" class="read-more">See More →</a>
+        </div>
+      </div>
+
+      <!-- Animation Section -->
+      <div class="portfolio-category">
+        <h3 class="category-title">Animation</h3>
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal">
+            <video autoplay loop muted playsinline>
+              <source src="assets/videos/animation1.mp4" type="video/mp4">
+            </video>
+            <div class="portfolio-text">
+              <h4>Character Animation</h4>
+              <p>Expressive, story-driven animation work.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <video autoplay loop muted playsinline>
+              <source src="assets/videos/animation2.mp4" type="video/mp4">
+            </video>
+            <div class="portfolio-text">
+              <h4>Motion Graphics</h4>
+              <p>Clean transitions and brand-centered animations.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <video autoplay loop muted playsinline>
+              <source src="assets/videos/animation3.mp4" type="video/mp4">
+            </video>
+            <div class="portfolio-text">
+              <h4>3D Logo Reveal</h4>
+              <p>Dynamic identity animation with depth and impact.</p>
+            </div>
+          </article>
+        </div>
+        <div class="cta-right">
+          <a href="portfolio-pages/animation.html" class="read-more">See More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

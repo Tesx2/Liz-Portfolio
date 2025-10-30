@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animation Portfolio | Liz Kendi</title>
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/et-emilia-grace" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="../assets/profile/logo.png" alt="Liz Kendi Logo">
+      <h1>Liz</h1>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="../testimonials.html">Testimonials</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Animation Portfolio Section -->
+  <section class="portfolio">
+    <div class="portfolio-content">
+      <h2 class="section-title">Animation Showcase</h2>
+      <p class="portfolio-intro">
+        Explore a collection of my animation work — from expressive character motion to clean brand visuals and dynamic 3D compositions.
+      </p>
+
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="character">Character</button>
+        <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+        <button class="filter-btn" data-filter="3d">3D Animation</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid">
+        <article class="portfolio-card reveal" data-category="character">
+          <video autoplay loop muted playsinline>
+            <source src="../assets/videos/animation1.mp4" type="video/mp4">
+          </video>
+          <div class="portfolio-text">
+            <h4>Character Animation</h4>
+            <p>Expressive movements and personality-driven storytelling.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal" data-category="motion">
+          <video autoplay loop muted playsinline>
+            <source src="../assets/videos/animation2.mp4" type="video/mp4">
+          </video>
+          <div class="portfolio-text">
+            <h4>Motion Graphics</h4>
+            <p>Clean typography transitions and dynamic brand sequences.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal" data-category="3d">
+          <video autoplay loop muted playsinline>
+            <source src="../assets/videos/animation3.mp4" type="video/mp4">
+          </video>
+          <div class="portfolio-text">
+            <h4>3D Logo Reveal</h4>
+            <p>Depth, lighting, and camera motion crafted to impress.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal" data-category="motion">
+          <video autoplay loop muted playsinline>
+            <source src="../assets/videos/animation4.mp4" type="video/mp4">
+          </video>
+          <div class="portfolio-text">
+            <h4>Animated Promo Clip</h4>
+            <p>Storytelling in motion — visual rhythm for brand campaigns.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="cta-center">
+        <a href="../portfolio.html" class="btn secondary">← Back to Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="../script.js"></script>
+
+  <script>
+    // Filtering functionality
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        portfolioCards.forEach(card => {
+          const category = card.dataset.category;
+          if (filter === "all" || filter === category) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
