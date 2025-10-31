@@ -74,3 +74,9 @@ if (contactForm) {
     }
   });
 }
+
+// Auto-update footer year
+const yearSpan = document.getElementById('year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}

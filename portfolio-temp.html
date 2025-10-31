@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Liz Kendi</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/et-emilia-grace" rel="stylesheet">
+
+  <style>
+    /* ===== Under Construction Styles ===== */
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .construction-content {
+      padding: 100px 20px;
+      max-width: 700px;
+    }
+
+    h1 {
+      font-family: 'ET Emilia Grace', cursive;
+      color: #8a307f;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: #8a307f;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #c17ac6;
+      transform: scale(1.05);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/profile/logo.png" alt="Liz Kendi Logo">
+      <h1>Liz</h1>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#" class="active">Portfolio</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Under Construction Section -->
+  <video autoplay loop muted playsinline>
+    <source src="assets/icons/page.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="construction-content reveal">
+    <h1>Portfolio in Progress</h1>
+    <p>
+      I'm currently crafting something beautiful.  
+      Check back soon to see my latest design and animation projects.  
+      In the meantime, you can view my work in PDF form or return to the homepage.
+    </p>
+
+    <div class="btn-group">
+      <a href="https://drive.google.com/file/d/1VSYkfiyOW-BP-W5B8qJ5dGhYd3KSOleW/view?usp=sharing" class="btn" download>View PDF Portfolio</a>
+      <a href="index.html" class="btn secondary">← Back to Home</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
